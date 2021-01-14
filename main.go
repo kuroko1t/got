@@ -1,6 +1,6 @@
 package main
 
-import "github.com/skanehira/got/app"
+import "github.com/kuroko1t/got/app"
 
 func main() {
 	app.New().Run()

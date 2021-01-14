@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/manifoldco/promptui"
-	"github.com/skanehira/got/tmux"
+	"github.com/kuroko1t/got/tmux"
 )
 
 type App struct {
@@ -145,13 +145,13 @@ func (a *App) selectAction(name string) error {
 		})
 	}
 
-	actions = append(actions,
-		action{
-			Name: "Kill",
-			Do: func(name string) error {
-				return a.tmux.KillSession(name)
-			},
-		})
+	//actions = append(actions,
+	//	  action{
+	//		Name: "Kill",
+	//		Do: func(name string) error {
+	//			return a.tmux.KillSession(name)
+	//		},
+	//	  })
 
 	prompt := promptui.Select{
 		Label: "Action",
