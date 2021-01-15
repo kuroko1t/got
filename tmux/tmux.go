@@ -80,7 +80,7 @@ func (t *Tmux) NewSession() error {
 }
 
 func (t *Tmux) AttachSession(name string) error {
-	cmd := exec.Command("tmux", "attach", "-t", name)
+	cmd := exec.Command("tmux", "attach", "-t",name , "-d")
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
